@@ -1,0 +1,18 @@
+# Problem: Remove Duplicates from Sorted Array
+(Easy) - https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+func removeDuplicates(nums []int) int {
+
+    p,s := 1,1
+
+    for s < len(nums){
+        if nums[s] != nums[s-1]{
+            nums[p] = nums[s]
+            p += 1
+        } 
+        s += 1
+    }
+
+    return p
+    
+}
